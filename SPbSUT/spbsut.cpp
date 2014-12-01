@@ -11,6 +11,7 @@ SPbSUT::SPbSUT(int argc, char *argv[])
     this->itemsWidget = new Items();
     this->itemWidget = new Item();
     this->newsItemWidget = new newsItem();
+    this->menuStatut = false;
 }
 
 QString SPbSUT::genTitle(QString title)
@@ -106,7 +107,7 @@ void SPbSUT::run()
 
 
     screenTitle = w->findChild<QLabel *>("screenTitleLabel");
-    screenTitle->setText(genTitle("Hello Bitchies"));
+    screenTitle->setText(genTitle("Hello Bonch"));
 
     QGridLayout *contentWidget = w->findChild<QGridLayout *>("contentLayout");
 
@@ -132,38 +133,21 @@ void SPbSUT::run()
     connect(w->findChild<QPushButton *>("info"), &QPushButton::released,
             this, &SPbSUT::setCategoryScreen);
 
+
     //categories
-    connect(w->findChild<QPushButton *>("pushButton_1"), &QPushButton::released,
-            this, &SPbSUT::setItemsScreen);
+    connect(w->findChild<QPushButton *>("pushButton"), &QPushButton::released,
+            this, &SPbSUT::setItemScreen);
     connect(w->findChild<QPushButton *>("pushButton_2"), &QPushButton::released,
-            this, &SPbSUT::setItemsScreen);
-    connect(w->findChild<QPushButton *>("pushButton_3"), &QPushButton::released,
-            this, &SPbSUT::setItemsScreen);
-    connect(w->findChild<QPushButton *>("pushButton_3"), &QPushButton::released,
-            this, &SPbSUT::setItemsScreen);
-    connect(w->findChild<QPushButton *>("pushButton_4"), &QPushButton::released,
-            this, &SPbSUT::setItemsScreen);
-    connect(w->findChild<QPushButton *>("pushButton_5"), &QPushButton::released,
-            this, &SPbSUT::setItemsScreen);
-    connect(w->findChild<QPushButton *>("pushButton_6"), &QPushButton::released,
-            this, &SPbSUT::setItemsScreen);
-    //items
-    connect(w->findChild<QPushButton *>("item1"), &QPushButton::released,
             this, &SPbSUT::setItemScreen);
-    connect(w->findChild<QPushButton *>("item2"), &QPushButton::released,
-            this, &SPbSUT::setItemScreen);
-    connect(w->findChild<QPushButton *>("item3"), &QPushButton::released,
+    connect(w->findChild<QPushButton *>("pushButton_3"), &QPushButton::released,
             this, &SPbSUT::setItemScreen);
 
-    //items
-    connect(w->findChild<QPushButton *>("news1"), &QPushButton::released,
+
+    connect(w->findChild<QPushButton *>("showFull_1"), &QPushButton::released,
             this, &SPbSUT::setNewsItemScreen);
-    connect(w->findChild<QPushButton *>("news2"), &QPushButton::released,
+    connect(w->findChild<QPushButton *>("showFull_"), &QPushButton::released,
             this, &SPbSUT::setNewsItemScreen);
-    connect(w->findChild<QPushButton *>("news3"), &QPushButton::released,
-            this, &SPbSUT::setNewsItemScreen);
-    connect(w->findChild<QPushButton *>("news4"), &QPushButton::released,
-            this, &SPbSUT::setNewsItemScreen);
+
 
 
 

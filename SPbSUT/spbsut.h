@@ -36,6 +36,7 @@ private:
     Item * itemWidget;
     QLabel *screenTitle;
     newsItem * newsItemWidget;
+    bool menuStatut;
 
 public slots:
     void setNewsScreen();
