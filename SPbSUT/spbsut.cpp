@@ -143,9 +143,9 @@ void SPbSUT::run()
             this, &SPbSUT::setItemScreen);
 
 
-    connect(w->findChild<QPushButton *>("showFull_1"), &QPushButton::released,
+    connect(w->findChild<QWidget *>("news_1"), &QWidget::customContextMenuRequested,
             this, &SPbSUT::setNewsItemScreen);
-    connect(w->findChild<QPushButton *>("showFull_"), &QPushButton::released,
+    connect(w->findChild<QWidget *>("news_2"), &QWidget::releaseMouse,
             this, &SPbSUT::setNewsItemScreen);
 
 

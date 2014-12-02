@@ -12,3 +12,8 @@ news::~news()
 {
     delete ui;
 }
+
+void news::on_news_1_customContextMenuRequested(const QPoint &pos)
+{
+
+}

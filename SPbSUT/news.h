@@ -15,6 +15,9 @@ public:
     explicit news(QWidget *parent = 0);
     ~news();
 
+private slots:
+    void on_news_1_customContextMenuRequested(const QPoint &pos);
+
 private:
     Ui::news *ui;
 };

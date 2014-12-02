@@ -61,7 +61,7 @@ QTabWidget::pane { /* The tab widget frame */
       </size>
      </property>
      <property name="currentIndex">
-      <number>4</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
@@ -246,11 +246,6 @@ QTabWidget::pane { /* The tab widget frame */
      <widget class="QWidget" name="tab_4">
       <attribute name="title">
        <string>Dormitory</string>
-      </attribute>
-     </widget>
-     <widget class="QWidget" name="tab_5">
-      <attribute name="title">
-       <string>other</string>
       </attribute>
      </widget>
     </widget>
